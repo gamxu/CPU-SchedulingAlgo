@@ -9,7 +9,6 @@ def fifo(arr,maxf):
   t=[]
   fault=0
   farr=[]
-  count=0
   print("\nFirst In First Out")
   for i in arr:
     if i not in t:
@@ -17,16 +16,14 @@ def fifo(arr,maxf):
         t.append(i)
         print(i,"table:",t)
         fault=fault+1
-        count=count+1
-        farr.append(count)
+        farr.append(fault)
       else:
         t.pop(0)
         t.append(i)
         print(i,"table:",t)
         fault=fault+1
-        count=count+1
-        farr.append(count)
+        farr.append(fault)
     else:
         print(i)
-        farr.append(count)
+        farr.append(fault)
   return farr
