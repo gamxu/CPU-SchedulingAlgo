@@ -29,7 +29,6 @@ def opt(arr,maxf):
   '''
   t=[]
   fault=0
-  count=0
   farr=[]
   print("\nOptimal Algorithm")
   for i in range(len(arr)):
@@ -38,8 +37,7 @@ def opt(arr,maxf):
         t.append(arr[i])
         print(arr[i],"table:",t)
         fault=fault+1
-        count=count+1
-        farr.append(count)
+        farr.append(fault)
       else:
         currStr=arr[i:]
         vIdx=t.index(getLongestNotUse(t,currStr))
@@ -47,10 +45,9 @@ def opt(arr,maxf):
         t.append(arr[i])
         print(arr[i],"table:",t)
         fault=fault+1
-        count=count+1
-        farr.append(count)
+        farr.append(fault)
     else:
       print(arr[i])
-      farr.append(count)
+      farr.append(fault)
 
   return farr

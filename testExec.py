@@ -1,16 +1,16 @@
 import matplotlib.pyplot as plt
-import FirstInFirstOut 
-import LeastRecentlyUsed 
-import OptimalAlgorithm 
-import testdata 
+from FirstInFirstOut import *
+from LeastRecentlyUsed import *
+from OptimalAlgorithm import *
+from testdata import *
 
-data=testdata.test3arr
+data=exStr
 maxF=3
 
 # execute all algorithms
-x1=FirstInFirstOut.fifo(data,maxF)
-x2=OptimalAlgorithm.opt(data,maxF)
-x3=LeastRecentlyUsed.lru(data,maxF)
+x1=fifo(data,maxF)
+x2=opt(data,maxF)
+x3=lru(data,maxF)
 
 # plot all algorithms faults
 plt.plot(x1,label="FIFO")
